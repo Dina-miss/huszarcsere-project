@@ -76,14 +76,13 @@ public class GameController {
     private int previousColor = -1;
 
 
-    @FXML
     public void initialize() {
         gameOver.addListener((observable, oldValue, newValue) -> {
             if (newValue) {
                 log.info("Game is over");
                 log.debug("Saving result to database...");
-                gameResultDao.persist(createGameResult());
                 stopWatchTimeline.stop();
+                gameResultDao.persist(createGameResult());
             }
         });
         resetGame();
@@ -100,9 +99,6 @@ public class GameController {
         }
         else {
             log.info("Index ({}, {}) is chosen.", row, col);
-            if(selectedColor == previousColor) {
-                handleClickOnCube(mouseEvent);
-            }
             if (!gameState.isGoal() && gameState.canStepInto(selectedRow, selectedCol, row, col)) {
                 previousColor = selectedColor;
                 Table.currentState[row][col] = selectedColor;
