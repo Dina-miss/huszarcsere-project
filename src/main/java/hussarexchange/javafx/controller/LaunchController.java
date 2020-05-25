@@ -1,5 +1,7 @@
 package hussarexchange.javafx.controller;
 
+import hussarexchange.javafx.main.MyApplication;
+import hussarexchange.javafx.model.Table;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,18 +28,23 @@ public class LaunchController {
     @FXML
     private Label errorLabel;
 
+
     public void startAction(ActionEvent actionEvent) throws IOException {
         if (playerNameTextField.getText().isEmpty()) {
             errorLabel.setText("Írd be a neved!");
             log.error("Miss the name!", playerNameTextField.getText());
         } else {
-            fxmlLoader.setLocation(getClass().getResource("/fxml/GameScene.fxml"));
-            Parent root = fxmlLoader.load();
-            // fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
-            Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
+            Parent page = (Parent) fxmlLoader.load(getClass().getResource("/fxml/GameScene.fxml"));
+            MyApplication.stage.getScene().setRoot(page);
+            for(int i = 0; i < 3; i++) {
+                for(int j = 0; j < 3; j++) {
+                    Table.currentState[i][j] = Table.startState[i][j];
+                }
+                System.out.println();
+            }            /*
+            fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
             log.info("The players name is set to {}, loading game scene", playerNameTextField.getText());
+            */
         }
     }
 

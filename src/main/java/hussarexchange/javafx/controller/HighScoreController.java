@@ -1,5 +1,6 @@
 package hussarexchange.javafx.controller;
 
+import hussarexchange.javafx.main.MyApplication;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
@@ -50,7 +51,7 @@ public class HighScoreController {
 
     @FXML
     private TableColumn<GameResult, ZonedDateTime> created;
-
+/*
     @FXML
     private void initialize() {
         log.debug("Loading scores...");
@@ -96,16 +97,19 @@ public class HighScoreController {
         observableResult.addAll(highScoreList);
 
         highScoreTable.setItems(observableResult);
-    }
+    } */
 
     public void handleRestartButton(ActionEvent actionEvent) throws IOException {
         log.debug("{} is pressed", ((Button) actionEvent.getSource()).getText());
         log.info("Loading Launch scene...");
-        fxmlLoader.setLocation(getClass().getResource("/fxml/LaunchScene.fxml"));
+        Parent page = (Parent) fxmlLoader.load(getClass().getResource("/fxml/LaunchScene.fxml"));
+        MyApplication.stage.getScene().setRoot(page);
+
+        /*fxmlLoader.setLocation(getClass().getResource("/fxml/LaunchScene.fxml"));
         Parent root = fxmlLoader.load();
         Stage stage = (Stage) ((Node) actionEvent.getSource()).getScene().getWindow();
         stage.setScene(new Scene(root));
-        stage.show();
+        stage.show();*/
     }
 
 }

@@ -19,14 +19,17 @@ public class Game {
         }
 
         int getOldY() {
+
             return oldY;
         }
 
         int getNewX() {
+
             return newX;
         }
 
         int getNewY() {
+
             return newY;
         }
     }
