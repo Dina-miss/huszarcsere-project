@@ -1,0 +1,73 @@
+.root {
+    -fx-background-color: #ccb4ae;
+    -fx-text-fill: #000;
+    -fx-font-size: 12px;
+}
+
+.label {
+    -fx-font-family: Arial, Helvetica, sans-serif;
+    -fx-line-spacing: .5em;
+    -fx-text-fill: #000;
+}
+
+#titleLabel {
+    -fx-font-size: 3em;
+    -fx-font-family: Georgia;
+    -fx-text-fill: #a60001;
+}
+
+#rulesLabel {
+    -fx-text-fill: #a60001;
+    -fx-font-weight: bold;
+}
+
+.button {
+    -fx-background-color: transparent;
+    -fx-border-color: #a60001;
+    -fx-border-style: solid;
+    -fx-border: 1px;
+    -fx-text-fill: #a60001;
+}
+
+.button:hover {
+    -fx-background-color: #a60001;
+    -fx-border-color: #a60001;
+    -fx-border-style: solid;
+    -fx-border: 1px;
+    -fx-text-fill: #ccb4ae;
+}
+
+#playerNameTextField {
+    -fx-background-color: #ccb4ae;
+    -fx-prompt-text-fill: #565656;
+    -fx-border: 1px;
+    -fx-border-color: #565656;
+    -fx-border-style: solid;
+}
+
+#errorLabel {
+    -fx-text-fill: #ab0004;
+}
+
+#gameTable {
+    -fx-background-color: #bda49ea1;
+    -fx-grid-lines-visible: true
+}
+
+#timelabel, #stepslabel {
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+}
+
+#timecount, #stepsum {
+    -fx-font-size: 15px;
+}
+
+#highscoretable {
+    -fx-background-color: #bda49ea1;
+}
+
+.table-column {
+    -fx-background-color: #fff;
+    -fx-border-insets: -1 -1 0 0;
+}

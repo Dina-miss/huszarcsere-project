@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="hussarexchange.javafx.controller.LaunchController">
+   <children>
+      <ImageView fitHeight="715.0" fitWidth="1081.0" layoutX="-5.0" layoutY="-7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/launch.png" />
+         </image>
+      </ImageView>
+      <Label id="titleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="470.0" layoutY="41.0" prefHeight="64.0" prefWidth="301.0" text="Huszárcsere" textAlignment="CENTER" textFill="#a60001" textOverrun="CLIP">
+         <font>
+            <Font name="Bookman Old Style" size="23.0" />
+         </font>
+      </Label>
+      <Label alignment="TOP_CENTER" contentDisplay="CENTER" layoutX="448.0" layoutY="122.0" prefHeight="144.0" prefWidth="347.0" text="A huszárcsere játék egy logikai, a sakkra épülő táblajáték. A &#10;közös elemük a huszár, aki csak ló ugrásban képes haladni &#10;egy táblán. A játék egy 3x3 táblán zajlik, aminek a felső &#10;sorában 3 piros, alsó sorában pedig 3 kék huszár található, &#10;és a cél az, hogy felcseréljük a helyüket. " textAlignment="CENTER" />
+      <Label alignment="TOP_CENTER" layoutX="421.0" layoutY="283.0" prefHeight="90.0" prefWidth="388.0" text="1. Csak ló ugrásban lehet lépni!&#10;2. A piros és a kék huszárokkal felváltva kell lépni!&#10;3. A játékban nincsen kiütés, ha egy mező már foglalt, oda nem &#10;tudsz másik huszárt tenni!" />
+      <Button fx:id="startButton" layoutX="496.0" layoutY="491.0" mnemonicParsing="false" onAction="#startAction" prefHeight="45.0" prefWidth="172.0" text="Kezdjük a játékot!" />
+      <Label fx:id="errorLabel" layoutX="553.0" layoutY="440.0" prefHeight="16.0" prefWidth="151.0" />
+      <Label layoutX="439.0" layoutY="408.0" prefHeight="29.0" prefWidth="111.0" text="Felhasználónév: ">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="playerNameTextField" layoutX="553.0" layoutY="410.0" prefHeight="25.0" prefWidth="172.0" promptText="név helye" />
+      <Label fx:id="rulesLabel" alignment="CENTER" layoutX="427.0" layoutY="257.0" prefHeight="19.0" prefWidth="86.0" text="Szabályzat: " textAlignment="CENTER" textFill="#a60001">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
