@@ -59,7 +59,7 @@
     -fx-font-weight: bold;
 }
 
-#timeCount, #stepSum {
+#timeCount, #stepSum, #nextHussar {
     -fx-font-size: 15px;
 }
 

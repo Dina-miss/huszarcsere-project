@@ -30,7 +30,7 @@ public class GameResult {
     private String player;
 
     /**
-     * Indicates whether the player has solved the puzzle.
+     * Indicates whether the player has solved the game.
      */
     private boolean solved;
 
