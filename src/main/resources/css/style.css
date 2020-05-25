@@ -51,7 +51,7 @@
 
 #gameTable {
     -fx-background-color: #bda49ea1;
-    -fx-grid-lines-visible: true
+    -fx-grid-lines-visible: true;
 }
 
 #timelabel, #stepslabel {

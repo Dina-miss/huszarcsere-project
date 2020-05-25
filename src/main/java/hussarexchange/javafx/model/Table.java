@@ -21,6 +21,9 @@ public class Table {
             {1, 1, 1}
     };
 
+    /**
+     * The array representing the current configuration of the tray.
+     */
     public static int[][] currentState = {
             {1, 1, 1},
             {0, 0, 0},
@@ -28,28 +31,43 @@ public class Table {
     };
 
 
+    /**
+     * Checks whether the game is solved.
+     *
+     * @return {@code true} if the game is solved, {@code false} otherwise
+     */
     public static boolean isGoal() {
-        boolean TheEnd = false;
-
         for (int i = 0; i < 3; i++) {
-            if (currentState.equals(GoalState)) {
-                TheEnd = true;
-            } else {
-                TheEnd = false;
-                break;
+            for(int j = 0; j < 3; j++) {
+                if (currentState[i][j] == GoalState[i][j]) {}
+                else {
+                    return false;
+                }
             }
         }
-        return TheEnd;
+        return true;
     }
 
-    public static boolean canStepInto(int selectedRow, int selectedCol, int newRow, int newCol, int selectedColor) {
+
+    /**
+     * Return true if the hussar step an empty cell and it step in L shape.
+     *
+     * @return {@code true} if the hussar step an empty cell and it step in
+     * L shape, {@code false} otherwise
+     */
+    public static boolean canStepInto(int selectedRow, int selectedCol, int newRow, int newCol) {
         if(currentState[newRow][newCol] == 0 && GoodStep(selectedRow, selectedCol, newRow, newCol)) {
             return true;
         }
         return false;
     }
 
-
+    /**
+     * Checks the good steps. Return true if the hussar wants to take a good
+     * step.
+     *
+     * @return {@code true} if the step is good, {@code false} otherwise
+     */
     public static boolean GoodStep(int row, int col, int newRow, int newCol) {
         if(newRow - row == 2 && newCol - col == 1) {
             return true;
@@ -78,11 +96,6 @@ public class Table {
         else {
             return false;
         }
-    }
-
-    public static void main(String[] args) {
-        Table state = new Table();
-        System.out.println(state);
     }
 
 

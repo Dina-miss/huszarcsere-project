@@ -41,10 +41,9 @@ public class LaunchController {
                     Table.currentState[i][j] = Table.startState[i][j];
                 }
                 System.out.println();
-            }            /*
-            fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
+            }
+            //fxmlLoader.<GameController>getController().setPlayerName(playerNameTextField.getText());
             log.info("The players name is set to {}, loading game scene", playerNameTextField.getText());
-            */
         }
     }
 
