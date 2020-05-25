@@ -99,7 +99,7 @@ public class GameController {
             selectedColor = Table.currentState[row][col];
         }
         else {
-            log.debug("Index ({}, {}) is chosen.", row, col);
+            log.info("Index ({}, {}) is chosen.", row, col);
             if(selectedColor == previousColor) {
                 handleClickOnCube(mouseEvent);
             }

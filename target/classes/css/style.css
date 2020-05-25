@@ -54,7 +54,7 @@
     -fx-grid-lines-visible: true;
 }
 
-#timelabel, #stepslabel {
+#helpLabel {
     -fx-font-size: 15px;
     -fx-font-weight: bold;
 }
